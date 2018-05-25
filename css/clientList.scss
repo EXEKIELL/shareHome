@@ -21,8 +21,63 @@ body{
       align-items: center;
     }
     >div:first-child{
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       font-size: 0.26rem;
+      >div:nth-child(2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .wrap{
+          margin: 0 0.1rem;
+          transform-style:preserve-3d;
+          position: relative;
+          -webkit-transform-origin: center;
+          -moz-transform-origin: center;
+          -ms-transform-origin: center;
+          -o-transform-origin: center;
+          transform-origin: center;
+          -webkit-transform: perspective(500px) rotateX(0deg);
+          -moz-transform: perspective(500px) rotateX(0deg);
+          -ms-transform: perspective(500px) rotateX(0deg);
+          -o-transform: perspective(500px) rotateX(0deg);
+          transform: perspective(500px) rotateX(0deg);
+          >div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >div{
+              width: 0.82rem;
+              height: 0.95rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 0.8rem;
+              color: #6ebaff;
+              background: url("../img/bj08.png") no-repeat;
+              background-size: 100% 100%;
+              margin-right: 0.1rem;
+            }
+            >div:last-child{
+              margin-right: 0;
+            }
+          }
+          .slide2{
+            position: absolute;
+            top: 0px;
+            z-index: -1;
+            -webkit-transform-origin: center center;
+            -moz-transform-origin: center center;
+            -ms-transform-origin: center center;
+            -o-transform-origin: center center;
+            transform-origin: center center;
+            -webkit-transform:   translateZ(-1px)  rotateX(180deg);
+            -moz-transform:  translateZ(-1px)  rotateX(180deg);
+            -ms-transform:  translateZ(-1px)  rotateX(180deg);
+            -o-transform: translateZ(-1px)  rotateX(180deg);
+            transform: translateZ(-1px)  rotateX(180deg);
+          }
+        }
+      }
     }
     >div:nth-child(2){
       margin-top: 0.5rem;
@@ -204,5 +259,30 @@ body{
     color: #888888;
     background-color: #f6f6f6;
     padding: 0.3rem 0;
+  }
+}
+
+.rotatePage{
+  -webkit-animation: rotatePage 2s forwards;
+  -o-animation: rotatePage 2s forwards;
+  animation: rotatePage 2s forwards;
+}
+.reflect{
+  -webkit-box-reflect: below 1px linear-gradient(transparent,transparent 50%,rgba(0,0,0,.3));
+}
+@keyframes rotatePage {
+  from{
+    -webkit-transform: perspective(500px) rotateX(0deg);
+    -moz-transform: perspective(500px) rotateX(0deg);
+    -ms-transform: perspective(500px) rotateX(0deg);
+    -o-transform: perspective(500px) rotateX(0deg);
+    transform: perspective(500px) rotateX(0deg);
+  }
+  to{
+    -webkit-transform: perspective(500px) rotateX(-180deg);
+    -moz-transform: perspective(500px) rotateX(-180deg);
+    -ms-transform: perspective(500px) rotateX(-180deg);
+    -o-transform: perspective(500px) rotateX(-180deg);
+    transform: perspective(500px) rotateX(-180deg);
   }
 }

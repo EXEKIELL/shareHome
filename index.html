@@ -16,6 +16,7 @@
     <script src="js/swiper.min.js"></script>
 </head>
 <body>
+<div class="del01"></div>
 <div class="header">
     <div>
         <span class="icon" style="display: none"></span>
@@ -310,6 +311,11 @@
         $('#index .bottom>div').removeClass('sel');
         $(this).addClass('sel')
     })
+    $(function () {
+        $('.del01').prev().remove();
+        $('.del02').next().remove();
+    })
 </script>
+<div class="del02"></div>
 </body>
 </html>

@@ -24,7 +24,48 @@
     <div class="list1">
         <div>
             <div>全部客户</div>
-            <div>5378</div>
+            <div class="reflect">
+                <div class="wrap">
+                    <div class="slide1">
+                        <div><span>7</span></div>
+
+                    </div>
+                    <!--赋值到下面节点-->
+                    <div class="slide2">
+                        <div><span>8</span></div>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="slide1">
+                        <div><span>7</span></div>
+
+                    </div>
+                    <!--赋值到下面节点-->
+                    <div class="slide2">
+                        <div><span>9</span></div>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="slide1">
+                        <div><span>7</span></div>
+
+                    </div>
+                    <!--赋值到下面节点-->
+                    <div class="slide2">
+                        <div><span>1</span></div>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="slide1">
+                        <div><span>7</span></div>
+
+                    </div>
+                    <!--赋值到下面节点-->
+                    <div class="slide2">
+                        <div><span>3</span></div>
+                    </div>
+                </div>
+            </div>
             <div>个</div>
         </div>
         <div>
@@ -178,7 +219,13 @@
         $('#clientList .list3-nav>div').click(function () {
             $('#clientList .list3-nav>div').removeClass('sel');
             $(this).addClass('sel')
-        })
+        });
+        //翻牌效果
+        for(let i = 0;i<$('#clientList .reflect .wrap').length;i++){
+            setTimeout(function () {
+                $('#clientList .reflect>div').eq($('#clientList .reflect .wrap').length-i-1).addClass('rotatePage')
+            },i*100)
+        }
     })
 </script>
 </body>
